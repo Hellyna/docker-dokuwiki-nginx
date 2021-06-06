@@ -1,0 +1,5 @@
+#!/bin/sh
+
+frep /etc/tmpl.d/nginx.conf:/etc/nginx/nginx.conf --overwrite --missing error
+
+exec nginx -g 'daemon off;'
